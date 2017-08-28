@@ -18,7 +18,7 @@ Top images represent images synthesized from test sets; bottom ones are original
   </br>
 </p>
 
-Dataset examples: Edges that were generated from the original image with [Holistically-Nested Edge Detection (HED)](https://github.com/s9xie/hed) (left), image synthesized from edges (mid), original (right). The images were synthesized from samples that adversarial network was not trained on.
+Dataset examples: Edges that were generated from the original image with [Holistically-Nested Edge Detection (HED)](https://github.com/s9xie/hed) (left), image synthesized from edges (mid), original (right). The images were synthesized from samples that the adversarial network was not trained on.
 
 <p float="left">
   <img src="https://raw.githubusercontent.com/dichotomies/synthim/master/results/hed-synth-orig/book/clr-692_real_A.png" width="160" />
