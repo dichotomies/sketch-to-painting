@@ -21,7 +21,7 @@ Alternatives are `hardpaint` and `book`.
 Main scripts have command line arguments, get help with `python <python 
 script file name> --help`
 
-# Tools for Image Processing and Dataset Creation
+# Tools for Image Processing and Dataset Creation (`Tools`)
 
 ## Crop Margins (`booktools/crop.py`)
 
