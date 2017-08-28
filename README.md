@@ -1,4 +1,6 @@
-# Prerequisities and General Notes
+# Synthesizing Drawings and Paintings with Conditional Adversarial Networks
+
+## Prerequisities and General Notes
 
 Python version: 2.
 
@@ -21,9 +23,9 @@ Alternatives are `hardpaint` and `book`.
 Main scripts have command line arguments, get help with `python <python 
 script file name> --help`
 
-# Tools for Image Processing and Dataset Creation (`Tools`)
+## Tools for Image Processing and Dataset Creation (`Tools`)
 
-## Crop Margins (`booktools/crop.py`)
+### Crop Margins (`booktools/crop.py`)
 
 This package is only necessary if images of the book are used as input for
 synthim, i.e. the margins and stripes of the single pages must be removed. It
@@ -48,7 +50,7 @@ be used for the next steps like the other pictures (point towards these
 folders if asked for `--path_color` and `--path_edges`).
 
 
-## Extract Edges from Sketches with Canny (`booktools/binarize.py`)
+### Extract Edges from Sketches with Canny (`booktools/binarize.py`)
 
 ```
 python binarize.py \
@@ -58,7 +60,7 @@ pages-valid/sketch \
 --nb_convert_images 5
 ```
 
-## Extract Images from Wiki-HDF (`mkdataset/wiki.py`)
+### Extract Images from Wiki-HDF (`mkdataset/wiki.py`)
 
 This module must imported in a script if used, since functionality of passing parameters via CL is limited.
 
@@ -74,7 +76,7 @@ table = filter_table(table, "year", 1920, operator.ge)
 
 This script filters first for artists named Pablo Picasso ("operator.equal"), then it filters the result for any paintings created in 1920 or after 1920 ("operator.greaterequal").
 
-## Generating Edges from Images (`mkdataset/edges.py`)
+### Generating Edges from Images (`mkdataset/edges.py`)
 
 This module generates edges (output) from colored images (input) with HED.
 
@@ -86,7 +88,7 @@ CUDA_VISIBLE_DEVICES=3 python edges.py \
 --nb_convert_images 5
 ```
 
-## Generating Datasets (`mkdataset/dataset.py`)
+### Generating Datasets (`mkdataset/dataset.py`)
 
 ```
 python dataset.py \
@@ -97,7 +99,7 @@ python dataset.py \
 ```
 
 
-# Synthesize Images with (`synthim`)
+## Synthesize Images with (`synthim`)
 
 Images can have arbitrary size, because they are downscaled and cropped to
 input size of the adversarial net if necessary.
@@ -110,7 +112,7 @@ sketches are edges (i.e., no dataset is needed).
 
 Further options can be found in the folder `options`.
 
-## Training a Model
+### Training a Model
 
 ```
 CUDA_VISIBLE_DEVICES=3 python train.py \
@@ -131,7 +133,7 @@ rate linearly to zero: `--niter_decay`. Its default value is 100. Non-decaying
 iterations can be added with `--niter <100, 200, ...>`; default value being
 100.
 
-## Testing a Model
+### Testing a Model
 
 - i.e., use only data from test set (data that was not used while training)
 
@@ -144,7 +146,7 @@ CUDA_VISIBLE_DEVICES=3 python test.py \
 --name picasso --dataset_mode aligned
 ```
 
-## Synthesizing Images
+### Synthesizing Images
 
 The amount of pictures synthesized is limited to 50, adapt with the option 
 `--how_many`.
