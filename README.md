@@ -1,26 +1,27 @@
 # Prerequisities and General Notes
 
-Executable with Python 2.
+Python version: 2.
 
-Code was ran with newest versions of packages (see `required.txt` for list 
+Code was tested with newest versions of packages (see `required.txt` for list 
 of packages that are required).
 
-Install Caffe-HED-version according to https://github.com/s9xie/hed or simply
-add following lines into your rc file (same procedure if you don't want to
-install all packages yourself, i.e. change python library path).
+Install Caffe-HED-version according to https://github.com/s9xie/hed. Make sure
+to add caffe to Python path, e.g. add something like following lines to bashrc,
+zshrc etc.:
 
 ```
+# necessary for caffe
 export PYTHONPATH=$HOME/.local/share/caffe/python:$PYTHONPATH
 export CAFFE_ROOT=$HOME/.local/share/caffe
 ```
 
 This manual is based on pictures extracted from `wiki` for the artist Picasso.
-Alternatives are `hardpaint` and `book` ... [explained what is necessary].
+Alternatives are `hardpaint` and `book`.
 
 Main scripts have command line arguments, get help with `python <python 
 script file name> --help`
 
-# `booktools`
+# Tools for Image Processing and Dataset Creation
 
 ## Crop Margins (`booktools/crop.py`)
 
@@ -47,7 +48,7 @@ be used for the next steps like the other pictures (point towards these
 folders if asked for `--path_color` and `--path_edges`).
 
 
-## Extract Edges from Sketches with Canny (`binarize.py`)
+## Extract Edges from Sketches with Canny (`booktools/binarize.py`)
 
 ```
 python binarize.py \
@@ -57,9 +58,7 @@ pages-valid/sketch \
 --nb_convert_images 5
 ```
 
-# Tools of `mkdataset`
-
-## Extract Images from Wiki-HDF (`wiki.py`)
+## Extract Images from Wiki-HDF (`mkdataset/wiki.py`)
 
 This module must imported in a script if used, since functionality of passing parameters via CL is limited.
 
@@ -75,7 +74,7 @@ table = filter_table(table, "year", 1920, operator.ge)
 
 This script filters first for artists named Pablo Picasso ("operator.equal"), then it filters the result for any paintings created in 1920 or after 1920 ("operator.greaterequal").
 
-## Generating Edges from Images (`edges.py`)
+## Generating Edges from Images (`mkdataset/edges.py`)
 
 This module generates edges (output) from colored images (input) with HED.
 
@@ -87,7 +86,7 @@ CUDA_VISIBLE_DEVICES=3 python edges.py \
 --nb_convert_images 5
 ```
 
-## Generating Datasets (`dataset.py`)
+## Generating Datasets (`mkdataset/dataset.py`)
 
 ```
 python dataset.py \
@@ -98,7 +97,7 @@ python dataset.py \
 ```
 
 
-# Synthesize Images with `synthim`
+# Synthesize Images with (`synthim`)
 
 Images can have arbitrary size, because they are downscaled and cropped to
 input size of the adversarial net if necessary.
