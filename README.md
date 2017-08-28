@@ -1,6 +1,44 @@
 # Synthesizing Drawings and Paintings with Conditional Adversarial Networks
 
-## Prerequisities and General Notes
+## Results
+
+Top images represent images synthesized from test sets; bottom ones are original. For higher resolution see folder `results`.
+
+<center>
+<p float="left">
+  <img src="https://raw.githubusercontent.com/dichotomies/synthim/master/results/synth-orig/book/clr-592_fake_B.png" width="120" />
+  <img src="https://raw.githubusercontent.com/dichotomies/synthim/master/results/synth-orig/book/clr-838_fake_B.png" width="120" />
+  <img src="https://raw.githubusercontent.com/dichotomies/synthim/master/results/synth-orig/picasso/pablo-picasso_bust-of-woman-1936_fake_B.png" width="120" />
+  <img src="https://raw.githubusercontent.com/dichotomies/synthim/master/results/synth-orig/picasso/pablo-picasso_armchair-california-1956_fake_B.png" width ="120">
+  </br>
+  <img src="https://raw.githubusercontent.com/dichotomies/synthim/master/results/synth-orig/book/clr-592_real_B.png" width="120" />
+  <img src="https://raw.githubusercontent.com/dichotomies/synthim/master/results/synth-orig/book/clr-838_real_B.png" width="120" />
+  <img
+  src="https://raw.githubusercontent.com/dichotomies/synthim/master/results/synth-orig/picasso/pablo-picasso_bust-of-woman-1936_real_B.png" width="120" />
+  <img src="https://raw.githubusercontent.com/dichotomies/synthim/master/results/synth-orig/picasso/pablo-picasso_armchair-california-1956_real_B.png" width="120">
+  </br>
+</p>
+</center>
+
+Dataset examples: Edges that were generated from the original image with HED (left), image synthesized from edges (mid), original (right). The images were synthesized from samples that adversarial network was not trained on.
+
+<center>
+<p float="left">
+  <img src="https://raw.githubusercontent.com/dichotomies/synthim/master/results/hed-synth-orig/book/clr-692_real_A.png" width="160" />
+  <img src="https://raw.githubusercontent.com/dichotomies/synthim/master/results/hed-synth-orig/book/clr-692_fake_B.png" width="160" />
+  <img src="https://raw.githubusercontent.com/dichotomies/synthim/master/results/hed-synth-orig/book/clr-692_real_B.png" width="160" />
+  </br>
+  <img src="https://raw.githubusercontent.com/dichotomies/synthim/master/results/hed-synth-orig/picasso/pablo-picasso_a-dream-1932_real_A.png" width="160" />
+  <img src="https://raw.githubusercontent.com/dichotomies/synthim/master/results/hed-synth-orig/picasso/pablo-picasso_a-dream-1932_fake_B.png" width="160" />
+  <img
+  src="https://raw.githubusercontent.com/dichotomies/synthim/master/results/hed-synth-orig/picasso/pablo-picasso_a-dream-1932_real_B.png" width="160" />
+  </br>
+</p>
+</center>
+
+## Prerequisites and General Notes
+
+This project is heavily based on code from https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix.
 
 Python version: 2.
 
