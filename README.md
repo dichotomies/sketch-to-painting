@@ -133,7 +133,7 @@ python dataset.py \
 ```
 
 
-## Synthesize Images with (`synthim`)
+## Synthesize Images (`synthim`)
 
 Images can have arbitrary size, because they are downscaled and cropped to
 input size of the adversarial net if necessary.
