@@ -94,22 +94,6 @@ pages-valid/sketch \
 --nb_convert_images 5
 ```
 
-### Extract Images from Wiki-HDF (`mkdataset/wiki.py`)
-
-This module must imported in a script if used, since functionality of passing parameters via CL is limited.
-
-An example script can be found in `scripts`.
-
-It is possible to specify operators and filter the wiki pandas dataframe for key-value pairs, e.g.:
-
-```python
-table = load_table(path_hdf)
-table = filter_table(table, "artist_name", "pablo picasso", operator.eq)
-table = filter_table(table, "year", 1920, operator.ge)
-```
-
-This script filters first for artists named Pablo Picasso ("operator.equal"), then it filters the result for any paintings created in 1920 or after 1920 ("operator.greaterequal").
-
 ### Generating Edges from Images (`mkdataset/edges.py`)
 
 This module generates edges (output) from colored images (input) with HED.
@@ -131,7 +115,6 @@ python dataset.py \
 --path_dataset /export/home/vtschern/workspace/synthim/_datasets/picasso \
 --nb_convert_images 5
 ```
-
 
 ## Synthesize Images (`synthim`)
 
