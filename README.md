@@ -1,4 +1,4 @@
-# Synthesizing Drawings and Paintings with Conditional Adversarial Networks
+# Synthesizing Drawings and Paintings
 
 ## Results
 
@@ -99,7 +99,7 @@ pages-valid/sketch \
 This module generates edges (output) from colored images (input) with HED.
 
 ```
-CUDA_VISIBLE_DEVICES=3 python edges.py \
+python edges.py \
 --path_input /export/home/vtschern/workspace/_images/picasso/color \
 --path_output /export/home/vtschern/workspace/_images/picasso/edges \
 --path_hed /export/home/vtschern/workspace/mkdataset/configs/hed \
@@ -132,7 +132,7 @@ Further options can be found in the folder `options`.
 ### Training a Model
 
 ```
-CUDA_VISIBLE_DEVICES=3 python train.py \
+python train.py \
 --dataroot ./_datasets/picasso \
 --name picasso --dataset_mode aligned --no_lsgan --niter 900 
 ```
@@ -158,7 +158,7 @@ The amount of pictures synthesized is limited to 50, adapt with the option
 `--how_many`.
 
 ```
-CUDA_VISIBLE_DEVICES=3 python test.py \
+python test.py \
 --dataroot ./_datasets/picasso \
 --name picasso --dataset_mode aligned
 ```
@@ -171,7 +171,7 @@ The amount of pictures synthesized is limited to 50, adapt with the option
 For example, generating images from machine-generated edges:
 
 ```
-CUDA_VISIBLE_DEVICES=3 python synth.py \
+python synth.py \
 --dataroot /export/home/vtschern/workspace/_images/picasso/edges \
 --name picasso
 ```
@@ -179,7 +179,7 @@ CUDA_VISIBLE_DEVICES=3 python synth.py \
 For example, generating images from human-drawn sketches:
 
 ```
-CUDA_VISIBLE_DEVICES=3 python synth.py \
+python synth.py \
 --dataroot /export/home/vtschern/workspace/_images/picasso-sketch/binary/ \
 --name picasso
 ```
