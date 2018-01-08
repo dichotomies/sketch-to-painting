@@ -2,7 +2,7 @@
 
 ## Results
 
-Top images represent images synthesized from test sets; bottom ones are original. For higher resolution see folder `results`.
+Top images represent images synthesized from test sets; bottom ones are original. For higher resolution see folder `results`. For a full report about the study see [`study.pdf`](https://github.com/dichotomies/synthim/blob/master/study.pdf).
 
 <p float="left">
   <img src="https://raw.githubusercontent.com/dichotomies/synthim/master/results/synth-orig/book/clr-592_fake_B.png" width="120" />
