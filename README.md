@@ -7,33 +7,16 @@ This was a university project. I've included the full report about the study see
 
 # Results
 
-Top images represent images synthesized from test sets; bottom ones are original. For higher resolution see folder `results`. 
-
-<p float="left">
-  <img src="https://raw.githubusercontent.com/dichotomies/synthim/master/results/synth-orig/book/clr-592_fake_B.png" width="120" />
-  <img src="https://raw.githubusercontent.com/dichotomies/synthim/master/results/synth-orig/book/clr-838_fake_B.png" width="120" />
-  <img src="https://raw.githubusercontent.com/dichotomies/synthim/master/results/synth-orig/picasso/pablo-picasso_bust-of-woman-1936_fake_B.png" width="120" />
-  <img src="https://raw.githubusercontent.com/dichotomies/synthim/master/results/synth-orig/picasso/pablo-picasso_armchair-california-1956_fake_B.png" width ="120">
-  </br>
-  <img src="https://raw.githubusercontent.com/dichotomies/synthim/master/results/synth-orig/book/clr-592_real_B.png" width="120" />
-  <img src="https://raw.githubusercontent.com/dichotomies/synthim/master/results/synth-orig/book/clr-838_real_B.png" width="120" />
-  <img
-  src="https://raw.githubusercontent.com/dichotomies/synthim/master/results/synth-orig/picasso/pablo-picasso_bust-of-woman-1936_real_B.png" width="120" />
-  <img src="https://raw.githubusercontent.com/dichotomies/synthim/master/results/synth-orig/picasso/pablo-picasso_armchair-california-1956_real_B.png" width="120">
-  </br>
-</p>
-
 Dataset examples: Edges that were generated from the original image with [Holistically-Nested Edge Detection (HED)](https://github.com/s9xie/hed) (left), image synthesized from edges (mid), original (right). The images were synthesized from samples that the adversarial network was not trained on.
 
 <p float="left">
-  <img src="https://raw.githubusercontent.com/dichotomies/synthim/master/results/hed-synth-orig/book/clr-692_real_A.png" width="160" />
-  <img src="https://raw.githubusercontent.com/dichotomies/synthim/master/results/hed-synth-orig/book/clr-692_fake_B.png" width="160" />
-  <img src="https://raw.githubusercontent.com/dichotomies/synthim/master/results/hed-synth-orig/book/clr-692_real_B.png" width="160" />
+  <img src="https://raw.githubusercontent.com/dichotomies/synthim/master/results/hardpaint-edges/test_latest/images/ellsworth-kelly_yellow-over-dark-blue-1965_real_A.png" width="160" />
+  <img src="https://raw.githubusercontent.com/dichotomies/synthim/master/results/hardpaint-edges/test_latest/images/ellsworth-kelly_yellow-over-dark-blue-1965_fake_B.png" width="160" />
+  <img src="https://raw.githubusercontent.com/dichotomies/synthim/master/results/hardpaint-edges/test_latest/images/ellsworth-kelly_yellow-over-dark-blue-1965_real_B.png" width="160" />
   </br>
-  <img src="https://raw.githubusercontent.com/dichotomies/synthim/master/results/hed-synth-orig/picasso/pablo-picasso_a-dream-1932_real_A.png" width="160" />
-  <img src="https://raw.githubusercontent.com/dichotomies/synthim/master/results/hed-synth-orig/picasso/pablo-picasso_a-dream-1932_fake_B.png" width="160" />
-  <img
-  src="https://raw.githubusercontent.com/dichotomies/synthim/master/results/hed-synth-orig/picasso/pablo-picasso_a-dream-1932_real_B.png" width="160" />
+  <img src="https://raw.githubusercontent.com/dichotomies/synthim/master/results/hardpaint-edges/test_latest/images/ad-reinhardt_number-15-1952_real_A.png" width="160" />
+  <img src="https://raw.githubusercontent.com/dichotomies/synthim/master/results/hardpaint-edges/test_latest/images/ad-reinhardt_number-15-1952_fake_B.png" width="160" />
+  <img src="https://raw.githubusercontent.com/dichotomies/synthim/master/results/hardpaint-edges/test_latest/images/ad-reinhardt_number-15-1952_real_B.png" width="160" />
   </br>
 </p>
 
