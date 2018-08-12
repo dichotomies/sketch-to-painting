@@ -1,8 +1,13 @@
-# Synthesizing Drawings and Paintings
 
-## Results
+# About
 
-Top images represent images synthesized from test sets; bottom ones are original. For higher resolution see folder `results`. For a full report about the study see [`study.pdf`](https://github.com/dichotomies/synthim/blob/master/study.pdf).
+The goal of this project was to train a GAN (borrowed from [PyTorch Pix2Pix implementation](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix)) for the task of creating paintings from human-made sketches. For this purpose, the net learns to generate paintings (for example form Picasso) from their corresponding machine-extraced edges (extracted with [Hollistically-Nested-Edge](https://github.com/s9xie/hed) detection). The machine-extracted edges are proxies human-made sketches. At test time, the network is supposed to generate paintings in the style of the painter, whose artwork was fed into the network. Therefore, someone who can draw sketches would be able to generate paintings in a specific style.
+
+This was a university project. I've included the full report about the study see in this repository [`study.pdf`](https://github.com/dichotomies/synthim/blob/master/study.pdf).
+
+# Results
+
+Top images represent images synthesized from test sets; bottom ones are original. For higher resolution see folder `results`. 
 
 <p float="left">
   <img src="https://raw.githubusercontent.com/dichotomies/synthim/master/results/synth-orig/book/clr-592_fake_B.png" width="120" />
@@ -32,7 +37,7 @@ Dataset examples: Edges that were generated from the original image with [Holist
   </br>
 </p>
 
-## Prerequisites and General Notes
+# Prerequisites and General Notes
 
 This project is heavily based on code from https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix.
 
@@ -57,9 +62,9 @@ Alternatives are `hardpaint` and `book`.
 Main scripts have command line arguments, get help with `python <python 
 script file name> --help`
 
-## Tools for Image Processing and Dataset Creation (`Tools`)
+# Tools for Image Processing and Dataset Creation (`Tools`)
 
-### Crop Margins (`booktools/crop.py`)
+## Crop Margins (`booktools/crop.py`)
 
 This package is only necessary if images of the book are used as input for
 synthim, i.e. the margins and stripes of the single pages must be removed. It
@@ -84,7 +89,7 @@ be used for the next steps like the other pictures (point towards these
 folders if asked for `--path_color` and `--path_edges`).
 
 
-### Extract Edges from Sketches with Canny (`booktools/binarize.py`)
+## Extract Edges from Sketches with Canny (`booktools/binarize.py`)
 
 ```
 python binarize.py \
@@ -94,7 +99,7 @@ pages-valid/sketch \
 --nb_convert_images 5
 ```
 
-### Generating Edges from Images (`mkdataset/edges.py`)
+## Generating Edges from Images (`mkdataset/edges.py`)
 
 This module generates edges (output) from colored images (input) with HED.
 
@@ -106,7 +111,7 @@ python edges.py \
 --nb_convert_images 5
 ```
 
-### Generating Datasets (`mkdataset/dataset.py`)
+## Generating Datasets (`mkdataset/dataset.py`)
 
 ```
 python dataset.py \
@@ -116,7 +121,7 @@ python dataset.py \
 --nb_convert_images 5
 ```
 
-## Synthesize Images (`synthim`)
+# Synthesize Images (`synthim`)
 
 Images can have arbitrary size, because they are downscaled and cropped to
 input size of the adversarial net if necessary.
@@ -129,7 +134,7 @@ sketches are edges (i.e., no dataset is needed).
 
 Further options can be found in the folder `options`.
 
-### Training a Model
+## Training a Model
 
 ```
 python train.py \
@@ -150,7 +155,7 @@ rate linearly to zero: `--niter_decay`. Its default value is 100. Non-decaying
 iterations can be added with `--niter <100, 200, ...>`; default value being
 100.
 
-### Testing a Model
+## Testing a Model
 
 - i.e., use only data from test set (data that was not used while training)
 
@@ -163,7 +168,7 @@ python test.py \
 --name picasso --dataset_mode aligned
 ```
 
-### Synthesizing Images
+## Synthesizing Images
 
 The amount of pictures synthesized is limited to 50, adapt with the option 
 `--how_many`.
