@@ -11,7 +11,7 @@ This was a university project. I've included the full report about the study see
 
 The network was fed with [hard-edge paintings](https://en.wikipedia.org/wiki/Hard-edge_painting) and their corresponding machine-made (by HED) sketches. The following images illustrate edges that were generated from the original image with HED (left), image synthesized from edges by the GAN (mid), original (right). The images were synthesized from samples that the adversarial network was not trained on.
 
-<p float="left">
+<p align="center">
   <img src="https://raw.githubusercontent.com/dichotomies/synthim/master/results/hardpaint-edges/test_latest/images/ellsworth-kelly_yellow-over-dark-blue-1965_real_A.png" width="160" />
   <img src="https://raw.githubusercontent.com/dichotomies/synthim/master/results/hardpaint-edges/test_latest/images/ellsworth-kelly_yellow-over-dark-blue-1965_fake_B.png" width="160" />
   <img src="https://raw.githubusercontent.com/dichotomies/synthim/master/results/hardpaint-edges/test_latest/images/ellsworth-kelly_yellow-over-dark-blue-1965_real_B.png" width="160" />
@@ -25,7 +25,7 @@ The network was fed with [hard-edge paintings](https://en.wikipedia.org/wiki/Har
 
 For this task, I created the sketches (I tried to keep them simple and abstract as is common for the structures of hard-edge paintings) and let the network generate paintings.
 
-<p float="left">
+<p align="center">
   <img src="https://raw.githubusercontent.com/dichotomies/synthim/master/results/hardpaint-sketch/test_latest/images/hpaint-7_real_A.png" width="160" />
   <img src="https://raw.githubusercontent.com/dichotomies/synthim/master/results/hardpaint-sketch/test_latest/images/hpaint-7_fake_B.png" width="160" />
   </br>
