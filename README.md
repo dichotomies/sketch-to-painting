@@ -1,7 +1,7 @@
 
 # About
 
-The goal of this project was to train a GAN (borrowed from [PyTorch Pix2Pix implementation](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix)) for the task of creating paintings from human-made sketches. For this purpose, the net learns to generate paintings (for example form Picasso) from their corresponding machine-extraced edges (extracted with [Hollistically-Nested-Edge](https://github.com/s9xie/hed) detection). The machine-extracted edges are proxies human-made sketches. At test time, the network is supposed to generate paintings in the style of the painter, whose artwork was fed into the network. Therefore, someone who can draw sketches would be able to generate paintings in a specific style.
+The goal of this project was to train a GAN (borrowed from [PyTorch Pix2Pix implementation](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix)) for the task of creating paintings from human-made sketches. For this purpose, the net learns to generate paintings (for example form Picasso) from their corresponding machine-extraced edges (extracted with [Hollistically-Nested-Edge](https://github.com/s9xie/hed) detection). The machine-extracted edges are proxies for human-made sketches. At test time, the network is supposed to generate paintings in the style of the painter, whose artwork was fed into the network. Therefore, someone who can draw sketches would be able to generate paintings in a specific style.
 
 This was a university project. I've included the full report about the study see in this repository [`study.pdf`](https://github.com/dichotomies/synthim/blob/master/study.pdf).
 
