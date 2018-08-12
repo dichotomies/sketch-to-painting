@@ -7,17 +7,30 @@ This was a university project. I've included the full report about the study see
 
 # Results
 
-Dataset examples: Edges that were generated from the original image with [Holistically-Nested Edge Detection (HED)](https://github.com/s9xie/hed) (left), image synthesized from edges (mid), original (right). The images were synthesized from samples that the adversarial network was not trained on.
+## Machine-Made Sketch -> Painting
+
+The network was fed with [hard-edge paintings](https://en.wikipedia.org/wiki/Hard-edge_painting) and their corresponding machine-made (by HED) sketches. The following images illustrate edges that were generated from the original image with HED (left), image synthesized from edges by the GAN (mid), original (right). The images were synthesized from samples that the adversarial network was not trained on.
 
 <p float="left">
   <img src="https://raw.githubusercontent.com/dichotomies/synthim/master/results/hardpaint-edges/test_latest/images/ellsworth-kelly_yellow-over-dark-blue-1965_real_A.png" width="160" />
   <img src="https://raw.githubusercontent.com/dichotomies/synthim/master/results/hardpaint-edges/test_latest/images/ellsworth-kelly_yellow-over-dark-blue-1965_fake_B.png" width="160" />
   <img src="https://raw.githubusercontent.com/dichotomies/synthim/master/results/hardpaint-edges/test_latest/images/ellsworth-kelly_yellow-over-dark-blue-1965_real_B.png" width="160" />
   </br>
-  <img src="https://raw.githubusercontent.com/dichotomies/synthim/master/results/hardpaint-edges/test_latest/images/ad-reinhardt_number-15-1952_real_A.png" width="160" />
-  <img src="https://raw.githubusercontent.com/dichotomies/synthim/master/results/hardpaint-edges/test_latest/images/ad-reinhardt_number-15-1952_fake_B.png" width="160" />
-  <img src="https://raw.githubusercontent.com/dichotomies/synthim/master/results/hardpaint-edges/test_latest/images/ad-reinhardt_number-15-1952_real_B.png" width="160" />
+  <img src="https://raw.githubusercontent.com/dichotomies/synthim/master/results/hardpaint-edges/test_latest/images/frank-stella_pilica-ii-1973_real_A.png" width="160" />
+  <img src="https://raw.githubusercontent.com/dichotomies/synthim/master/results/hardpaint-edges/test_latest/images/frank-stella_pilica-ii-1973_fake_B.png" width="160" />
+  <img src="https://raw.githubusercontent.com/dichotomies/synthim/master/results/hardpaint-edges/test_latest/images/frank-stella_pilica-ii-1973_real_B.png" width="160" />
+</p>
+
+## Human-Made Sketch -> Painting
+
+For this task, I created the sketches (I tried to keep them simple and abstract as is common for the structures of hard-edge paintings) and let the network generate paintings.
+
+<p float="left">
+  <img src="https://raw.githubusercontent.com/dichotomies/synthim/master/results/hardpaint-sketch/test_latest/images/hpaint-7_real_A.png" width="160" />
+  <img src="https://raw.githubusercontent.com/dichotomies/synthim/master/results/hardpaint-sketch/test_latest/images/hpaint-7_fake_B.png" width="160" />
   </br>
+  <img src="https://raw.githubusercontent.com/dichotomies/synthim/master/results/hardpaint-sketch/test_latest/images/hpaint-5_real_A.png" width="160" />
+  <img src="https://raw.githubusercontent.com/dichotomies/synthim/master/results/hardpaint-sketch/test_latest/images/hpaint-5_fake_B.png" width="160" />
 </p>
 
 # Prerequisites and General Notes
